@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .head{
+            border-radius: 50%;
+            width:200px;
+            height: 200px;
+            margin-top: 20px;
+            background-color: #ffc0cb;
+            border: solid 5px black;
+        }
+        .ear{
+            --ear-size:50px;
+            border-radius: 50%;
+            width: var(--ear-size);
+            height: var(--ear-size);
+            background-color: #ffc0cb;
+            margin-left: 0px;
+            border: solid 5px black;
+            z-index: -1000;
+            position: relative;
+        }
+        .head:nth-child(1) div{
+            display: flex;
+        }
+       /*
+        .head:nth-child(1) div .nose{
+        margin-top: 20px;
+        } */
+        .head:nth-child(1) div .ear:nth-child(2){
+            margin-left: 80px;
+        }
+        .eye{
+            --eye-size:50px;
+            width: var(--eye-size);
+            height:var(--eye-size);
+            border-radius: 50%;
+            position: relative;
+            z-index: 1000;
+            background-color: white;
+            border: solid 2px black;
+            margin-top: -10px;
+        }
+        .eye:nth-child(1){
+            margin-left: 30px;
+        }
+        .eye:nth-child(2){
+            margin-left: 30px;
+        }
+        .eye .pupil{
+            width: calc(var(--eye-size)/2);
+            height: calc(var(--eye-size)/2);
+            border-radius: 50%;
+            background-color: black;
+            margin: 25%;
+        }
+        .nose{
+            --nose-height:60px;
+            --nose-width:100px;
+            width: var(--nose-width);
+            height: var(--nose-height);
+            border-radius: 35%;
+            background-color: #f57187;
+            margin-left: 47px;
+            border: solid 2px black;
+            margin-top: 10px;
+        }
+       .nostril{
+            height: calc(0.5*var(--nose-height));
+            width: calc(0.25*var(--nose-width));
+            background-color: black;
+            border-radius: 50%;
+            z-index: 1000;
+            margin-top:15px;
+            margin-left: 15px;
+        }
+        .nostril:nth-child(2){
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+       <div>
+           <div class="ear"></div>
+           <div class="ear"></div>
+       </div>
+       <div>
+           <div class="eye">
+               <div class="pupil"></div>
+           </div>
+           <div class="eye">
+            <div class="pupil"></div>
+           </div>
+       </div>
+       <div class="nose">
+           <div class="nostril"></div>
+           <div class="nostril"></div>
+       </div>
+    </div>
+</body>
+</html>

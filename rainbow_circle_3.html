@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inner{
+            --circle-border: 50%;
+            --circle-border-thickness:25px;
+            --total-circle-width:150px;
+
+            background-color: purple;
+            width: calc(var(--circle-border-thickness)*2);
+            height: calc(var(--circle-border-thickness)*2);
+            border-radius: var(--circle-border);
+            box-shadow: 0 0 0 var(--circle-border-thickness) blue,
+            /* 1st shadow */
+            0 0 0 calc(var(--circle-border-thickness)*2) green,
+            /* 2nd shadow */
+            0 0 0 calc(var(--circle-border-thickness)*3) yellow,
+            /* 3rd shadow */
+            0 0 0 calc(var(--circle-border-thickness)*4) orange,
+            /* 4th shadow */
+            0 0 0 calc(var(--circle-border-thickness)*5) red;
+
+            /* position for moving a whole thing */
+            position: relative;
+            
+            top:var(--total-circle-width);
+            left:var(--total-circle-width);
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="middle">
+           <div id="inner"></div>
+        </div>
+    </div>
+</body>
+</html>

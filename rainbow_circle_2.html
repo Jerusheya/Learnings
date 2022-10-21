@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* var - means variable 
+           cal - means calculate */
+        :root{
+            /* declaring global variable */
+         --circle-border: 50%;
+        --circle-border-thickness:25px;
+        }
+        #outer{
+            /* total = 200px+25px(left-padding)+25px(right-padding) = 300px*/
+            background-color: orange;
+            width: calc(var(--circle-border-thickness)*8);
+            height: calc(var(--circle-border-thickness)*8);
+            /* 200px */
+            border-radius: var(--circle-border);
+            border: var(--circle-border-thickness) solid red;
+            padding: var(--circle-border-thickness);
+        }
+        #middle{
+            /* total = 100px+25px(left-padding)+25px(right-padding)=200px */
+            background-color: green;
+            width: calc(var(--circle-border-thickness)*4);
+            height: calc(var(--circle-border-thickness)*4);
+            /* 100px */
+            border-radius: var(--circle-border);
+            border: var(--circle-border-thickness) solid yellow;
+            padding: var(--circle-border-thickness);
+        }
+        #inner{
+            /* total = 50px+25px(left-padding)+25px(right-padding) =100px*/
+            background-color: purple;
+            width: calc(var(--circle-border-thickness)*2);
+            height: calc(var(--circle-border-thickness)*2); 
+            /* 50px */
+            border-radius: var(--circle-border);
+            border: var(--circle-border-thickness) solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="middle">
+           <div id="inner"></div>
+        </div>
+    </div>
+</body>
+</html>
